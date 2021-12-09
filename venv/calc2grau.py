@@ -1,6 +1,8 @@
-#Importação
+#Imports
 import PySimpleGUI as sg
-#Definições
+
+
+#Define 2º degree calculator
 def calc2grau(a, b, c):
     delta = (b**2) - (4*a*c)
     if delta < 0:
@@ -15,7 +17,7 @@ def calc2grau(a, b, c):
     yv = -delta / (4 * a)  #y do vertice
     return x1, x2, xv, yv, delta, sqrtdelta
 
-#Corpo
+#scope
 def main():
     #Theme
     sg.theme('LightGrey1')
@@ -30,8 +32,10 @@ def main():
     ]
     
     
-    #criar janela
-    window = sg.Window('Calculadora de segundo grau.    ', layout)
+    '''This block is for to define the window to be created, 
+    including defining the of window with your name and layout.'''
+    
+    window = sg.Window('Calculadora de segundo grau.    ', layout) #create a window
     
     
     #loop
@@ -50,6 +54,6 @@ def main():
         
     return 0
 
-#call manin
+#call main
 if __name__ == '__main__':
     main()
