@@ -55,6 +55,9 @@ def main():
         event, value = window.read()
         if event == 'Fechar' or event == sg.WIN_CLOSED:
             break
+        '''O funcionamento ainda está com um bug, não sei como resolver este problema em questão
+        acredito que tenho que definir a variavel do evento ao recebr o click do mouse. Porém estou
+        com certa dificuldade, mas ainda sim consigo usar o programa com certas restrições'''
         try:
             resultado = calc2grau(float(value['eq2ga']), float(value['eq2gb']), float(value['eq2gc']))
             print(f"x' = {resultado[0]}")
@@ -65,7 +68,10 @@ def main():
             print(f'raiz de delta = {resultado[5]}')
             print()
         except:
-            print(calc1grau(float(value['eq1ga']), float(value['eq1gb'])))
+            try:
+                print(calc1grau(float(value['eq1ga']), float(value['eq1gb'])))#Necessário que não tenha as 3 linhas escritas na cacluladora de segundo grau
+            except:
+                print('Precisa digitar todas as variaveis, inclusive se a variavel for igual à 0')
         
     return 0
 
