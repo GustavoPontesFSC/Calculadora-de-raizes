@@ -12,7 +12,6 @@ def root2deg(a1=0, b1=0, c1=0):
     xv = -variavel['b']/(2*variavel['a']) #x do vertice
     yv = -delta / (4 * variavel['a'])  #y do vertice
     return x1, x2, xv, yv, delta, sqrtdelta
-print(root2deg(1,1,-1))
 
 
 def root1deg(a, b):
