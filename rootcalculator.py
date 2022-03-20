@@ -40,18 +40,18 @@ def main():
             break
         elif event == 'root1deg':
             try:
-                print(root1deg(float(value['eq1ga']), float(value['eq1gb'])))#Necessário que não tenha as 3 linhas escritas na cacluladora de segundo grau
+                print(root1deg(float(value['eq1ga']), float(value['eq1gb'])))
             except:
                 print('Você deve colocar todas as variaveis')
         elif event == 'root2deg':
             try:
                 resultado = root2deg(float(value['eq2ga']), float(value['eq2gb']), float(value['eq2gc']))
-                print(f"x' = {resultado[0]}")
-                print(f"x'' = {resultado[1]}")
-                print(f'x do vertice = {resultado[2]}')
-                print(f'y do vertice = {resultado[3]}')
-                print(f'delta = {resultado[4]}')
-                print(f'raiz de delta = {resultado[5]}')
+                print(f"x' = {resultado.x1}")
+                print(f"x'' = {resultado.x2}")
+                print(f'x do vertice = {resultado.xv}')
+                print(f'y do vertice = {resultado.yv}')
+                print(f'delta = {resultado.delta}')
+                print(f'raiz de delta = {resultado.sqrtdelta}')
                 print()
             except:
                 print('Você deve colocar todas as variaveis')
